@@ -12,6 +12,7 @@ export const constructPrompt = (config: Omit<GenerationConfig, 'apiKey'>): strin
   1. 評語要有創意，使用正向鼓勵的語氣和溫暖親切的口氣。
   2. 請使用第二人稱「你」來稱呼學生，不要用第三人稱。
   3. 字數控制在${config.wordLimit}字左右。
+  4. 不要分段。
   
   特質：${traitsStr}`;
 };
