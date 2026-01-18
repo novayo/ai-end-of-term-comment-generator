@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 學生期末評語產生器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // 莫蘭迪粉色系 (Morandi Pink Palette)
+              primary: '#b07d85',       // Dusty Rose (主要按鈕、強調)
+              'primary-hover': '#96636b', // Darker Rose
+              
+              secondary: '#8a9a9a',     // Morandi Green/Grey (次要動作、下載)
+              'secondary-hover': '#728282',
+
+              selected: '#e8d3d5',      // Light Pink (選取狀態背景)
+              'selected-hover': '#dec0c3',
+              
+              'warm-gray': '#f5f0f0',   // 溫暖的淺灰背景
+              'text-dark': '#5c5555',   // 深暖灰文字
+            },
+            keyframes: {
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'fade-in-down': 'fadeInDown 0.3s ease-out',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#fcfaf9] text-[#5c5555] min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>

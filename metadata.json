@@ -1,0 +1,5 @@
+{
+  "name": "AI Comment Generator",
+  "description": "A student report card comment generator using Google Gemini API. Teachers can input student lists, select traits and styles, and generate personalized comments.",
+  "requestFramePermissions": []
+}
