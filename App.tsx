@@ -2,7 +2,9 @@ import React, { useState, useCallback, useEffect } from 'react';
 import StudentManager from './components/StudentManager';
 import TraitSelector from './components/TraitSelector';
 import ControlPanel from './components/ControlPanel';
+import UsageGuide from './components/UsageGuide';
 import { generateCommentAI, constructPrompt } from './services/geminiService';
+import { CircleHelp } from 'lucide-react';
 
 // Define the shape of the state we want to save per student
 interface StudentState {
@@ -30,6 +32,9 @@ const App: React.FC = () => {
   const [tempPrompt, setTempPrompt] = useState<string | null>(null);
   
   const [isGenerating, setIsGenerating] = useState(false);
+
+  // Modal State
+  const [isUsageOpen, setIsUsageOpen] = useState(false);
 
   // Load API Key from local storage on mount
   useEffect(() => {
@@ -242,11 +247,23 @@ const App: React.FC = () => {
     : (selectedStudent ? (comments[selectedStudent] || '') : '');
 
   return (
-    <div className="max-w-6xl mx-auto p-4 md:p-8 font-sans text-text-dark">
-      <header className="mb-8 text-center">
-        <h1 className="text-3xl font-bold text-primary mb-2 tracking-wide">AI 學生期末評語產生器</h1>
+    <div className="max-w-6xl mx-auto p-4 md:p-8 font-sans text-text-dark relative">
+      <header className="mb-8 text-center relative">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <h1 className="text-3xl font-bold text-primary tracking-wide">AI 學生期末評語產生器</h1>
+          <button 
+            onClick={() => setIsUsageOpen(true)}
+            className="text-stone-400 hover:text-primary transition-colors p-1 rounded-full hover:bg-stone-100"
+            title="使用說明"
+          >
+            <CircleHelp size={24} />
+          </button>
+        </div>
         <p className="text-gray-500 font-light">讓評語更有溫度，看見每個孩子的獨特光芒</p>
       </header>
+
+      {/* Usage Guide Modal */}
+      <UsageGuide isOpen={isUsageOpen} onClose={() => setIsUsageOpen(false)} />
 
       {/* Removed separate ApiKeyInput component */}
 
