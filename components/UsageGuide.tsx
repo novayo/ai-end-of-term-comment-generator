@@ -38,7 +38,7 @@ const UsageGuide: React.FC<UsageGuideProps> = ({ isOpen, onClose }) => {
           <div className="bg-stone-50 rounded-lg p-5 border border-stone-200">
             <h3 className="text-lg font-bold text-text-dark mb-3 flex items-center gap-2">
               <span className="bg-stone-200 text-stone-600 w-6 h-6 rounded-full flex items-center justify-center text-sm">1</span>
-              手動複製 Prompt (無需 API Key)
+              手動複製提示詞 (無需 API Key)
             </h3>
             <p className="text-sm text-stone-500 mb-4 ml-8">
               如果您沒有 Gemini API Key，或想使用 ChatGPT / Claude 等其他 AI 模型：
@@ -55,7 +55,7 @@ const UsageGuide: React.FC<UsageGuideProps> = ({ isOpen, onClose }) => {
               <li className="flex items-start gap-3">
                 <span className="mt-1 text-stone-400">3.</span>
                 <span className="flex items-center gap-1">
-                  點擊 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-300 rounded text-xs text-stone-600"><Eye size={12}/> 生成 Prompt</span> 按鈕。
+                  點擊 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-300 rounded text-xs text-stone-600"><Eye size={12}/> 產生提示詞</span> 按鈕。
                 </span>
               </li>
               <li className="flex items-start gap-3">

@@ -282,7 +282,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
               `}
             >
               <Eye size={16} />
-              生成 Prompt
+              產生提示詞
             </button>
 
             <button
@@ -346,7 +346,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
           <div className="mt-1.5 ml-1 text-xs text-stone-500 flex items-start gap-1">
             <span className="text-primary mt-0.5">💡</span>
             <span>
-              若無 API Key，可點擊上方 <b>「生成 Prompt」</b>，將提示詞複製到您的AI工具使用。
+              若無 API Key，可點擊上方 <b>「產生提示詞」</b>，將提示詞複製到<b>您的AI聊天室</b>使用。
             </span>
           </div>
         </div>
