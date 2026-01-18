@@ -1,5 +1,7 @@
 # AI 學生期末評語產生器 (AI Student Comment Generator)
 
+網址：https://novayo.github.io/ai-end-of-term-comment-generator/
+
 這是一個專為教師設計的網頁應用程式，旨在透過 AI 技術協助快速生成溫暖、個性化且具建設性的學生期末評語。透過直覺的介面，教師可以輕鬆管理學生名單、選擇特質標籤與語氣風格，大幅節省撰寫評語的時間。
 
 ## 🎯 專案目的
