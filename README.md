@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AI 學生期末評語產生器 (AI Student Comment Generator)
 
-# Run and deploy your AI Studio app
+這是一個專為教師設計的網頁應用程式，旨在透過 AI 技術協助快速生成溫暖、個性化且具建設性的學生期末評語。透過直覺的介面，教師可以輕鬆管理學生名單、選擇特質標籤與語氣風格，大幅節省撰寫評語的時間。
 
-This contains everything you need to run your app locally.
+## 🎯 專案目的
 
-View your app in AI Studio: https://ai.studio/apps/drive/1LUvx0AzsZoo6bD45VW9tAr4zyEanGyFN
+*   **練習 Vide Coding**：本專案旨在練習透過 AI 輔助進行程式開發與快速迭代。
 
-## Run Locally
+## ✨ 功能特色
 
-**Prerequisites:**  Node.js
+*   **學生名單管理**：
+    *   支援批次輸入學生姓名（一行一個）。
+    *   自動解析清單並生成切換按鈕。
+    *   具備「置頂懸浮選單」，在長名單捲動時也能快速切換學生。
+*   **多樣化特質選擇**：
+    *   內建四大類特質（資質、品德、人際、專長）。
+    *   支援「自定義特質」，可隨時新增與刪除。
+*   **客製化風格設定**：
+    *   提供多種語氣風格（如：鼓勵型、幽默、詩意、十六箴言等）。
+    *   可自訂字數限制。
+*   **雙重生成模式**：支援「複製 Prompt」手動生成與「API 金鑰」自動生成。
+*   **莫蘭迪質感 UI**：使用 Tailwind CSS 打造舒適柔和的視覺體驗。
 
+## 🚀 使用方法
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+本應用程式提供兩種生成評語的方式，您可以依需求選擇：
+
+### 方法 1：手動複製 Prompt (無需 API Key)
+如果您沒有 Gemini API Key，或想使用 ChatGPT / Claude 等其他 AI 模型：
+1. 輸入學生姓名並選取該學生。
+2. 點選學生的特質標籤與希望的評語風格。
+3. 點擊 **「👁️ 生成 Prompt」** 按鈕。
+4. 點擊 **「複製文字」**，將產生的提示詞貼上至 ChatGPT 或 Gemini 網頁版即可獲得評語。
+
+### 方法 2：API 自動生成 (推薦)
+直接在應用程式內完成所有動作：
+1. 在下方欄位輸入您的 **Google Gemini API Key** (格式以 `AIza` 開頭)。
+2. 選取學生、特質與風格。
+3. 點擊 **「🪄 生成評語」** 按鈕。
+4. AI 將自動生成評語並顯示於文字框內，您可直接進行修飾或複製。
